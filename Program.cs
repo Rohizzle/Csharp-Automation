@@ -4,47 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes
+namespace FloatingPointNumbers
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Person perOne = new Person();
-            perOne.FirstName = "Roheel";
-            perOne.LastName = "Arshad";
-            perOne.Country = "Scotland";
+            float f_no = 0.0f;
+            double d_no = 0.0d;
+            decimal m_no = 0.0m;
+            f_no = 1 / 3f;
+            d_no = 1 / 3d;
+            m_no = 1 / 3m;
 
-            Person perTwo = new Person();
-            perTwo.FirstName = "Mohfizzle";
-            perTwo.LastName = "Foshizzle";
-            perTwo.Country = "UK";
-
-            Console.WriteLine(perOne.FirstName);
-            Console.WriteLine(perTwo.FirstName);
+            //place holder
+            Console.WriteLine("Float no. is {0}", f_no);
+            Console.WriteLine("Double no. is {0}", d_no);
+            Console.WriteLine("Decimal no. is {0}", m_no);
         }
-    }
-
-    class Person
-    {
-        string firstName;
-        string lastName;
-        DateTime birthDate;
-        string country;
-
-        public string FirstName
-        {
-            get { return firstName;  }
-            set { firstName = value; }
-        }
-
-        public string LastName
-        {
-            get { return lastName; }
-            set { lastName = value;  }
-        }
-
-        public DateTime BirthDate { get; set; }
-        public string Country { get; set; }
     }
 }
