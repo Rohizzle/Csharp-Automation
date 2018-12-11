@@ -4,48 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Variables
+namespace MethodsPart1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int x = 2;
-            Console.WriteLine("Number x is " + x);
-            x = 5;
-            Console.WriteLine("Number x is " + x);
+            int a, b, c, d;
+            int addResult = 0;
+            a = 5;
+            b = 3;
+            addResult = PerformAddOperation(a, b);
+             Console.WriteLine($"{a} +{b} = {addResult}");
+             DisplayMessage();
+            //  PerformAddOperation(a, b);
 
-            double double_num = 0.0d;
-            float float_num = 0.0f;
-            decimal decimal_num = 0.0m;
+            c = 15;
+            d = 10;
+            addResult = PerformAddOperation(c, d);
+            Console.WriteLine($"{c} +{d} = {addResult}");
+            DisplayMessage();
+            //PerformAddOperation(c, d);
 
-            double_num = 9.8;
-            float_num = 5.5f;
-            decimal_num = 100.250m;
+        }
+        static int PerformAddOperation(int x, int y)
+        {
+            int addResult = 0;
+            addResult = x + y;
+            //Console.WriteLine($"{x} +{y} = {addResult}");
+            //DisplayMessage();
+            return addResult;
 
-            Console.WriteLine("Double is "+ double_num + " float is " + float_num + " decimal is " + decimal_num);
+        }
 
-           //these variables will define the names and houses
-            string firstName = "Jon";
-            string lastName = "Snow";
-            string House = "Stark";
-                Console.WriteLine("Hello, " + firstName + " " + lastName + " of House Stark ");
-
-            bool IsWorking;
-
-            IsWorking = false;
-
-            Console.WriteLine(IsWorking);
-
-            int sum;
-            sum = 0;
-
-            int number1, number2;
-
-            number1 = 5;
-            number2 = 100;
-            sum = number2;
-            Console.WriteLine(sum);
+        static void DisplayMessage()
+        {
+            Console.WriteLine("Process is done");
+            Console.WriteLine("This process is run by Roheel");
+            Console.WriteLine("Finished on time : "+DateTime.Now.ToShortTimeString());
         }
     }
 }
