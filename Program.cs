@@ -4,44 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MethodsPart1
+namespace Classes
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a, b, c, d;
-            int addResult = 0;
-            a = 5;
-            b = 3;
-            addResult = PerformAddOperation(a, b);
-             Console.WriteLine($"{a} +{b} = {addResult}");
-             DisplayMessage();
-            //  PerformAddOperation(a, b);
+            Person perOne = new Person();
+            perOne.FirstName = "Roheel";
+            perOne.LastName = "Arshad";
+            perOne.Country = "Scotland";
 
-            c = 15;
-            d = 10;
-            addResult = PerformAddOperation(c, d);
-            Console.WriteLine($"{c} +{d} = {addResult}");
-            DisplayMessage();
-            //PerformAddOperation(c, d);
+            Person perTwo = new Person();
+            perTwo.FirstName = "Mohfizzle";
+            perTwo.LastName = "Foshizzle";
+            perTwo.Country = "UK";
 
+            Console.WriteLine(perOne.FirstName);
+            Console.WriteLine(perTwo.FirstName);
         }
-        static int PerformAddOperation(int x, int y)
+    }
+
+    class Person
+    {
+        string firstName;
+        string lastName;
+        DateTime birthDate;
+        string country;
+
+        public string FirstName
         {
-            int addResult = 0;
-            addResult = x + y;
-            //Console.WriteLine($"{x} +{y} = {addResult}");
-            //DisplayMessage();
-            return addResult;
-
+            get { return firstName;  }
+            set { firstName = value; }
         }
 
-        static void DisplayMessage()
+        public string LastName
         {
-            Console.WriteLine("Process is done");
-            Console.WriteLine("This process is run by Roheel");
-            Console.WriteLine("Finished on time : "+DateTime.Now.ToShortTimeString());
+            get { return lastName; }
+            set { lastName = value;  }
         }
+
+        public DateTime BirthDate { get; set; }
+        public string Country { get; set; }
     }
 }
